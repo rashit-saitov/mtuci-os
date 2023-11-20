@@ -10,8 +10,10 @@ int main() {
         pid2 = fork();
         if (pid2 > 0) {
             printf("Родительский процесс: pid = %d, pid дочернего процесса 1 = %d, pid дочернего процесса 2 = %d\n", getpid(), pid1, pid2);
-            //system("ps -x");
+            system("ps -x");
             myCurrentTime();
+            wait(NULL);
+            wait(NULL);
         } else if (pid2 == 0) {
             printf("Дочерний процесс: pid = %d, pid родительского = %d\n", getpid(), getppid());
             myCurrentTime();

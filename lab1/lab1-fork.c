@@ -13,14 +13,14 @@ int main() {
             //system("ps -x");
             myCurrentTime();
         } else if (pid2 == 0) {
-            printf("Дочерний процесс 1: pid = %d, pid родительского = %d\n", getpid(), getppid());
+            printf("Дочерний процесс: pid = %d, pid родительского = %d\n", getpid(), getppid());
             myCurrentTime();
         } else {
-            printf("Дочерний процесс 2: pid = %d, pid родительского = %d\n", getpid(), getppid());
+            printf("Дочерний процесс: pid = %d, pid родительского = %d\n", getpid(), getppid());
             myCurrentTime();
         }
     } else if (pid1 == 0) {
-        printf("Дочерний процесс 1: pid = %d, pid родительского = %d\n", getpid(), getppid());
+        printf("Дочерний процесс: pid = %d, pid родительского = %d\n", getpid(), getppid());
     } else {
         perror("Ошибочка");
         return 1;
